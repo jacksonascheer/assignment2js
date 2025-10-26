@@ -25,3 +25,7 @@ plt.ylabel("Count")
 plt.tight_layout()
 plt.savefig("species_count.png")
 print("Plot saved as species_count.png")
+
+corr = data.corr(numeric_only=True)
+corr.to_csv("penguins_correlations.csv")
+print("Correlation matrix saved.")
